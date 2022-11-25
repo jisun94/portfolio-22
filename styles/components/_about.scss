@@ -1,0 +1,26 @@
+.about {
+  padding: 20vh 0;
+  &-text-main {
+    @include flexbox(between, start);
+    padding-bottom: 20vh;
+    h1 {
+      width: 50%;
+      font-size: 12vw;
+      font-weight: 400;
+      letter-spacing: -9px;
+    }
+
+    p {
+      width: 50%;
+      margin-top: 15vh;
+      font-size: 2vw;
+    }
+  }
+
+  .btm-txt {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 3vw;
+  }
+}

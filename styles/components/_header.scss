@@ -1,0 +1,32 @@
+header {
+  @include animation(top-bottom2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+
+  .header-wrapper {
+    @include flexbox(between, center);
+    margin: 2vw $padding;
+    font-size: 0.8vw;
+    font-weight: bold;
+
+    nav {
+    }
+
+    .nav-list {
+      @include flexbox(start);
+    }
+
+    .nav-item {
+      margin-right: 2vw;
+    }
+
+    h1 {
+      font-size: 0.8vw;
+      span {
+      }
+    }
+  }
+}

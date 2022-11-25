@@ -1,0 +1,32 @@
+@import './base/normalize';
+@import './constants/colors';
+@import './constants/global';
+@import './base/font';
+@import './base/reset';
+@import './mixins/flexbox';
+@import './mixins/positions';
+@import './mixins/animation';
+
+@import './components/header';
+@import './components/home';
+@import './components/about';
+@import './components/project';
+@import './components/contact';
+
+#text {
+  transition: all 500ms ease-in-out;
+  opacity: 0;
+
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+.pro-text {
+  @include flexbox(center);
+  padding: 20vh 0;
+  h1 {
+    font-size: 15vw;
+    text-align: center;
+  }
+}

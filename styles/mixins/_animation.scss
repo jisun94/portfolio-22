@@ -1,0 +1,104 @@
+@mixin transition {
+  transition: all 400ms ease-in-out;
+}
+
+@mixin animation($type: bottom-top) {
+  animation-name: $type;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition-timing-function: cubic-bezier(0.26, 1, 0.48, 1);
+}
+
+@keyframes left-right {
+  from {
+    transform: translate3d(-20%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes right-left {
+  from {
+    transform: translate3d(20%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes top-bottom {
+  from {
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-top {
+  from {
+    transform: translate3d(0, 20%, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes top-bottom2 {
+  from {
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-top2 {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes bottom-top3 {
+  from {
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes opacity {
+  from {
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes skewUp {
+  0% {
+    transform: skewY(-4deg) translate3d(0, 50%, 0);
+  }
+  100% {
+    transform: skewY(0) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}

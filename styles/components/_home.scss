@@ -1,0 +1,52 @@
+.home {
+  position: relative;
+  margin-top: 20vh;
+  height: 80vh;
+  h1 {
+    width: max-content;
+    font-size: 7.5vw;
+    line-height: 1;
+    letter-spacing: -0.5vw;
+    font-weight: 400;
+    span {
+      display: inline-block;
+      vertical-align: top;
+      padding-right: 1vw;
+      overflow: hidden;
+      span {
+        @for $i from 1 through 3 {
+          &.span-#{$i} {
+            opacity: 0;
+            @include animation(bottom-top2);
+            animation-delay: #{($i / 10 + 0.5)}s;
+          }
+        }
+      }
+    }
+    #circle {
+      display: inline-block;
+      width: 5.5vw;
+      height: 5.5vw;
+      min-width: 5.5vw;
+      margin-left: -1vw;
+      margin-right: -1.5vw;
+      border: 0.6vw solid $pink;
+      border-radius: 6vw;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+  }
+
+  .down {
+    @include animation(opacity);
+    animation-delay: 1.2s;
+    position: absolute;
+    right: 0;
+    bottom: 10vh;
+    font-weight: 500;
+    font-size: 1.1vw;
+    opacity: 0;
+  }
+}
