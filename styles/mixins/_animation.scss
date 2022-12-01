@@ -2,6 +2,10 @@
   transition: all 400ms ease-in-out;
 }
 
+@mixin transition2 {
+  transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
+}
+
 @mixin animation($type: bottom-top) {
   animation-name: $type;
   animation-duration: 1s;
@@ -99,6 +103,16 @@
   }
   100% {
     transform: skewY(0) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+@keyframes width {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 100%;
     opacity: 1;
   }
 }

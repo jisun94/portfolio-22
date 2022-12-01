@@ -16,14 +16,14 @@ body {
   width: 100vw;
   margin: 0 auto;
   padding: 0 $padding;
-  background-color: $background;
-  color: $dark;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 500ms ease-in-out;
+  background-color: $black;
+  color: $gold;
+  font-family: 'Josefin Sans', sans-serif;
+  transition: all 400ms ease-in-out;
   &.bg-change {
-    background-color: $dark;
-    color: $background;
-    transition: all 500ms ease-in-out;
+    background-color: $black;
+    color: $gold;
+    transition: all 400ms ease-in-out;
   }
 }
 
@@ -72,4 +72,15 @@ img {
 
 section {
   overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span,
+a {
+  font-weight: 300;
 }
