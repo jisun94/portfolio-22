@@ -16,14 +16,13 @@ body {
   width: 100vw;
   margin: 0 auto;
   padding: 0 $padding;
-  background-color: $black;
-  color: $gold;
-  font-family: 'Josefin Sans', sans-serif;
-  transition: all 400ms ease-in-out;
-  &.bg-change {
-    background-color: $black;
-    color: $gold;
-    transition: all 400ms ease-in-out;
+  background-color: $background;
+  color: $orange;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.6s ease-in-out;
+  &.bgChange {
+    background-color: $orange;
+    color: $background;
   }
 }
 
@@ -74,13 +73,16 @@ section {
   overflow-x: hidden;
 }
 
-h1,
+h1 {
+  font-weight: 700;
+}
+
 h2,
 h3,
 h4,
 h5,
-p,
-span,
-a {
-  font-weight: 300;
+h6,
+a,
+p {
+  font-weight: 600;
 }
