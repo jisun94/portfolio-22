@@ -200,6 +200,19 @@ if (window.matchMedia('(min-width: 1200px)').matches) {
   window.onresize = () => {
     location.reload();
   };
+} else if (window.matchMedia('(min-width: 1200px)').matches) {
+  const proText = document.querySelector('#proText h2');
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    proText.style.fontSize = `clamp(5rem, ${current / 15}px, 15rem)`;
+  });
 } else {
-  //project text
+  const proText = document.querySelector('#proText h2');
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    proText.style.fontSize = `clamp(3rem, ${current / 15}px, 10rem)`;
+  });
+
+  // const proText = document.querySelector('#proText h2');
+  // proText.style.fontSize = '5rem';
 }

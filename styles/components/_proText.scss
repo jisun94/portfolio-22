@@ -1,0 +1,22 @@
+.pro-text {
+  @include flexbox(center);
+  padding: 20vh 0;
+
+  h2 {
+    font-size: 6vw;
+    text-align: center;
+    letter-spacing: -1vw;
+  }
+
+  @include responsive(T) {
+    h2 {
+      font-size: 8rem;
+    }
+  }
+
+  @include responsive(M) {
+    h2 {
+      font-size: 5rem;
+    }
+  }
+}

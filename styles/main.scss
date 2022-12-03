@@ -9,6 +9,7 @@
 @import './components/header';
 @import './components/home';
 @import './components/about';
+@import './components/proText';
 @import './components/project';
 @import './components/contact';
 @import './components/menu';
@@ -19,22 +20,5 @@
   &.is-active {
     transition: all 400ms ease-in-out;
     opacity: 1;
-  }
-}
-
-.pro-text {
-  @include flexbox(center);
-  padding: 20vh 0;
-
-  h2 {
-    font-size: 6vw;
-    text-align: center;
-    letter-spacing: -1vw;
-  }
-
-  @include responsive(T) {
-    h2 {
-      font-size: 5rem;
-    }
   }
 }
