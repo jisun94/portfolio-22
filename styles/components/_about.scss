@@ -1,19 +1,19 @@
 .about {
   padding: 20vh 0;
   &-text-main {
-    @include flexbox(between, start);
+    @include flexbox(around, start);
     padding-bottom: 20vh;
-    h1 {
-      width: 50%;
+    h2 {
+      width: 40%;
       font-size: 12vw;
-      font-weight: 400;
-      letter-spacing: -9px;
+      letter-spacing: -0.7vw;
     }
 
     p {
-      width: 50%;
+      width: 40%;
       margin-top: 15vh;
-      font-size: 2vw;
+      font-size: 1.8vw;
+      letter-spacing: -0.1vw;
     }
   }
 
@@ -22,5 +22,48 @@
     margin: 0 auto;
     text-align: center;
     font-size: 3vw;
+  }
+
+  @include responsive(T) {
+    padding: 0 4vw;
+    &-text-main {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 10vh;
+      h2 {
+        width: 100%;
+        padding-bottom: 10vh;
+        font-size: 10rem;
+        letter-spacing: -0.5rem;
+      }
+      p {
+        width: 100%;
+        margin-top: 0;
+        font-size: 2rem;
+      }
+    }
+
+    .btm-txt {
+      width: auto;
+      font-size: 2.5rem;
+    }
+  }
+
+  @include responsive(M) {
+    &-text-main {
+      padding-bottom: 5vh;
+      h2 {
+        font-size: 5rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    .btm-txt {
+      font-size: 1.6rem;
+    }
   }
 }
