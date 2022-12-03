@@ -10,77 +10,134 @@
   <body>
     <header>
       <div class="header-wrapper">
-        <nav>
+        <nav class="mobile-hidden">
           <ul class="nav-list">
             <li class="nav-item">
-              <a href="/">HOME</a>
+              <a>Home</a>
             </li>
             <li class="nav-item">
-              <a href="/">ABOUT</a>
+              <a>About</a>
             </li>
             <li class="nav-item">
-              <a href="/">PROJECT</a>
+              <a>Project</a>
             </li>
             <li class="nav-item">
-              <a href="/">CONTACT</a>
+              <a>Contact</a>
             </li>
           </ul>
         </nav>
-        <h1>
-          Summer
-          <span>Jisun</span>
-          Lee
-        </h1>
       </div>
     </header>
     <main>
-      <section class="home">
-        <h1>
+      <section class="home" id="home">
+        <h1 class="mobile-hidden">
           <span>
-            <span class="span-1">HELLO I’M JISUN </span>
+            <span class="span-1">Hello I'm Jisun </span>
           </span>
           <br />
           <span>
-            <span class="span-2">FRONT END DEVELOPER</span>
+            <span class="span-2">Front End Developer</span>
           </span>
           <br />
           <span>
             <span class="span-3">
-              FR
+              Fr
               <div id="circle"></div>
-              M <span class="italic">SOUTH KOREA</span>
+              m<span class="italic">South Korea</span>
             </span>
           </span>
         </h1>
-        <p class="down">Please Scroll Down ⇂</p>
+        <h1 class="mobile-only">
+          Hello I'm Jisun Front End Developer From South Korea
+        </h1>
+        <p class="down">scroll down</p>
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="about-text-main">
-          <h1>about</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
-            architecto fugit, cum explicabo itaque autem sequi. <br />
-            <br />
-            Expedita non, commodi earum qui saepe voluptas sint deserunt
-            assumenda alias quis asperiores! Ipsum iste perferendis
-            necessitatibus iusto
+          <h2 class="text">about</h2>
+          <p class="text">
+            대학 졸업 후 3년간 영어강사로 학생들을 가르치던 중 새로운 분야에
+            도전하고픈 마음이 생겨 국비지원으로 html과 css 를 배우게 되었습니다.
             <br /><br />
-            reiciendis dolores explicabo officia totam maiores praesentium,
-            incidunt accusantium eveniet culpa quisquam laudantium excepturi
-            sunt obcaecati.
+            몇줄의 코드로(사실 수백.. 수천줄..) 웹 화면을 만들어 낼 수 있다는
+            것에 많은 흥미를 느껴 그 후 유튜브와 udemy를 통하여 SCSS,
+            javascript(es6), React를 배웠습니다. <br /><br />
+            화면을 보며 UI component를 만드는 것과 학습 과정을 깃허브에 단계별로
+            커밋 하는 것을 좋아합니다.
             <br />
             <br />
             <br />
           </p>
         </div>
-
-        <p class="btm-txt">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
-          doloribus!
+        <p class="btm-txt text">
+          이해하기 쉬운 코드를 쓰고, 늘 배움에 적극적인 개발자가 되고싶습니다.
         </p>
       </section>
-      <section class="project">
-        <h1>PROJECT</h1>
+      <section id="proText" class="pro-text">
+        <h2>Project</h2>
+      </section>
+      <section class="project" id="project">
+        <ul class="project-list">
+          <li class="project-item">
+            <a href="/">
+              <h3 class="project-item-name">Selling Property</h3>
+            </a>
+            <div class="project-item-photo">
+              <img src="./assets/1533024751841.jpg" alt="tokyo" />
+            </div>
+          </li>
+          <li class="project-item">
+            <a href="/">
+              <h3 class="project-item-name">Selling Property</h3>
+            </a>
+            <div class="project-item-photo">
+              <img src="./assets/1533024762519.jpg" alt="tokyo" />
+            </div>
+          </li>
+          <li class="project-item">
+            <a href="/">
+              <h3 class="project-item-name">Selling Property</h3>
+            </a>
+            <div class="project-item-photo">
+              <img src="./assets/1533024751841.jpg" alt="tokyo" />
+            </div>
+          </li>
+          <li class="project-item">
+            <a href="/">
+              <h3 class="project-item-name">Selling Property</h3>
+            </a>
+            <div class="project-item-photo">
+              <img src="./assets/1533024762519.jpg" alt="tokyo" />
+            </div>
+          </li>
+          <li class="project-item">
+            <a href="/">
+              <h3 class="project-item-name">Selling Property</h3>
+            </a>
+            <div class="project-item-photo">
+              <img src="./assets/1533024751841.jpg" alt="tokyo" />
+            </div>
+          </li>
+          <li class="project-item">
+            <a href="/">
+              <h3 class="project-item-name">Selling Property</h3>
+            </a>
+            <div class="project-item-photo">
+              <img src="./assets/1533024762519.jpg" alt="tokyo" />
+            </div>
+          </li>
+          <li class="project-item">
+            <a href="/">
+              <h3 class="project-item-name">Selling Property</h3>
+            </a>
+            <div class="project-item-photo">
+              <img src="./assets/1533024762519.jpg" alt="tokyo" />
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- <section class="project">
         <ul class="project-list">
           <li class="project-item">
             <a href="/">a</a>
@@ -143,19 +200,18 @@
             </ul>
           </li>
         </ul>
-      </section>
-
-      <section class="contact">
+      </section> -->
+      <section class="contact" id="contact">
         <div class="contact-wrapper">
-          <h1>GET IN TOUCH</h1>
+          <h1 class="text">Get In Touch</h1>
           <footer>
-            <p>©2022 JISUN LEE</p>
-            <ul class="socials">
-              <li><a href="/">GITHUB</a></li>
-              <li><a href="/">LINKED IN</a></li>
-              <li><a href="/">GMAIL</a></li>
+            <p class="text">©2022 Jisun Lee</p>
+            <ul class="socials text">
+              <li><a href="/">Github</a></li>
+              <li><a href="/">Linked In</a></li>
+              <li><a href="/">Gmail</a></li>
             </ul>
-            <p>All rights reserved.</p>
+            <p class="text">All rights reserved.</p>
           </footer>
         </div>
       </section>

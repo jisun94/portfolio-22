@@ -1,23 +1,23 @@
 @import './base/normalize';
+@import './base/grids';
 @import './constants/colors';
-@import './constants/global';
 @import './base/font';
 @import './base/reset';
 @import './mixins/flexbox';
 @import './mixins/positions';
 @import './mixins/animation';
-
 @import './components/header';
 @import './components/home';
 @import './components/about';
 @import './components/project';
 @import './components/contact';
+@import './components/menu';
 
-#text {
-  transition: all 500ms ease-in-out;
+.text {
+  @include transition;
   opacity: 0;
-
   &.is-active {
+    transition: all 400ms ease-in-out;
     opacity: 1;
   }
 }
@@ -25,8 +25,16 @@
 .pro-text {
   @include flexbox(center);
   padding: 20vh 0;
-  h1 {
-    font-size: 15vw;
+
+  h2 {
+    font-size: 6vw;
     text-align: center;
+    letter-spacing: -1vw;
+  }
+
+  @include responsive(T) {
+    h2 {
+      font-size: 3rem;
+    }
   }
 }
