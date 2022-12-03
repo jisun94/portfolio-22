@@ -196,16 +196,10 @@ if (window.matchMedia('(min-width: 1200px)').matches) {
       parent.classList.remove('is-reavel');
     });
   });
+
+  window.onresize = () => {
+    location.reload();
+  };
 } else {
   //project text
-
-  const proText = document.querySelector('#proText h2');
-  window.addEventListener('scroll', () => {
-    const current = window.scrollY;
-    proText.style.fontSize = `clamp(3rem, ${current / 15}px, 10rem)`;
-  });
 }
-
-window.onresize = () => {
-  location.reload();
-};

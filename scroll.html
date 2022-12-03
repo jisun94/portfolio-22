@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onload="init()">
+    <header>
+      <div class="header-wrapper">
+        <nav>
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="/">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">PROJECT</a>
+            </li>
+            <li class="nav-item">
+              <a href="/">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+        <h1>
+          Summer
+          <span>Jisun</span>
+          Lee
+        </h1>
+      </div>
+    </header>
+    <main>
+      <section class="home">
+        <h1>
+          <span>
+            <span class="span-1">HELLO I’M JISUN </span>
+          </span>
+          <br />
+          <span>
+            <span class="span-2">FRONT END DEVELOPER</span>
+          </span>
+          <br />
+          <span>
+            <span class="span-3">
+              FR
+              <div id="circle"></div>
+              M <span>SOUTH KOREA</span>
+            </span>
+          </span>
+        </h1>
+        <p class="down">Please Scroll Down ⇂</p>
+      </section>
+      <section class="about">
+        <div class="about-text-main">
+          <h1>about</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque
+            architecto fugit, cum explicabo itaque autem sequi. <br />
+            <br />
+            Expedita non, commodi earum qui saepe voluptas sint deserunt
+            assumenda alias quis asperiores! Ipsum iste perferendis
+            necessitatibus iusto
+            <br /><br />
+            reiciendis dolores explicabo officia totam maiores praesentium,
+            incidunt accusantium eveniet culpa quisquam laudantium excepturi
+            sunt obcaecati.
+            <br />
+            <br />
+            <br />
+          </p>
+        </div>
+
+        <p class="btm-txt">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+          doloribus!
+        </p>
+      </section>
+      <section class="project">
+        <h1>PROJECT</h1>
+        <ul class="project-list">
+          <li class="project-item">
+            <a href="/">a</a>
+            <ul class="textbox">
+              <li>
+                <h3 class="item-name">SELLING PROPERTY</h3>
+                <p class="item-desc">REAL ESTATE WEB APP</p>
+                <p class="item-tech">REACT</p>
+                <p class="item-tech">FIREBASE</p>
+                <p class="item-tech">SCSS</p>
+              </li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <a href="/">b</a>
+            <ul class="textbox">
+              <li>
+                <h3 class="item-name">SELLING PROPERTY</h3>
+                <p class="item-desc">REAL ESTATE WEB APP</p>
+                <p class="item-tech">REACT</p>
+                <p class="item-tech">FIREBASE</p>
+                <p class="item-tech">SCSS</p>
+              </li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <a href="/">c</a>
+            <ul class="textbox">
+              <li>
+                <h3 class="item-name">SELLING PROPERTY</h3>
+                <p class="item-desc">REAL ESTATE WEB APP</p>
+                <p class="item-tech">REACT</p>
+                <p class="item-tech">FIREBASE</p>
+                <p class="item-tech">SCSS</p>
+              </li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <a href="/">d</a>
+            <ul class="textbox">
+              <li>
+                <h3 class="item-name">SELLING PROPERTY</h3>
+                <p class="item-desc">REAL ESTATE WEB APP</p>
+                <p class="item-tech">REACT</p>
+                <p class="item-tech">FIREBASE</p>
+                <p class="item-tech">SCSS</p>
+              </li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <a href="/">e</a>
+            <ul class="textbox">
+              <li>
+                <h3 class="item-name">SELLING PROPERTY</h3>
+                <p class="item-desc">REAL ESTATE WEB APP</p>
+                <p class="item-tech">REACT</p>
+                <p class="item-tech">FIREBASE</p>
+                <p class="item-tech">SCSS</p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section class="contact">
+        <div class="contact-wrapper">
+          <h1>GET IN TOUCH</h1>
+          <footer>
+            <p>©2022 JISUN LEE</p>
+            <ul class="socials">
+              <li><a href="/">GITHUB</a></li>
+              <li><a href="/">LINKED IN</a></li>
+              <li><a href="/">GMAIL</a></li>
+            </ul>
+            <p>All rights reserved.</p>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function init() {
+        new SmoothScroll(document, 50, 12);
+      }
+
+      function SmoothScroll(target, speed, smooth) {
+        if (target === document)
+          target =
+            document.scrollingElement ||
+            document.documentElement ||
+            document.body.parentNode ||
+            document.body; // cross browser support for document scrolling
+
+        var moving = false;
+        var pos = target.scrollTop;
+        var frame =
+          target === document.body && document.documentElement
+            ? document.documentElement
+            : target; // safari is the new IE
+
+        target.addEventListener('mousewheel', scrolled, { passive: false });
+        target.addEventListener('DOMMouseScroll', scrolled, { passive: false });
+
+        function scrolled(e) {
+          e.preventDefault(); // disable default scrolling
+
+          var delta = normalizeWheelDelta(e);
+
+          pos += -delta * speed;
+          pos = Math.max(
+            0,
+            Math.min(pos, target.scrollHeight - frame.clientHeight)
+          ); // limit scrolling
+
+          if (!moving) update();
+        }
+
+        function normalizeWheelDelta(e) {
+          if (e.detail) {
+            if (e.wheelDelta)
+              return (e.wheelDelta / e.detail / 40) * (e.detail > 0 ? 1 : -1);
+            // Opera
+            else return -e.detail / 3; // Firefox
+          } else return e.wheelDelta / 120; // IE,Safari,Chrome
+        }
+
+        function update() {
+          moving = true;
+
+          var delta = (pos - target.scrollTop) / smooth;
+
+          target.scrollTop += delta;
+
+          if (Math.abs(delta) > 0.5) requestFrame(update);
+          else moving = false;
+        }
+
+        var requestFrame = (function () {
+          // requestAnimationFrame cross browser
+          return (
+            window.requestAnimationFrame ||
+            window.webkitRequestAnimationFrame ||
+            window.mozRequestAnimationFrame ||
+            window.oRequestAnimationFrame ||
+            window.msRequestAnimationFrame ||
+            function (func) {
+              window.setTimeout(func, 1000 / 50);
+            }
+          );
+        })();
+      }
+    </script>
+  </body>
+</html>
