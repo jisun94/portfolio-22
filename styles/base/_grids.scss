@@ -1,18 +1,22 @@
 $padding: 100px;
-
-$breakpoint: 768px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 1200px;
 
 @mixin responsive($screen) {
   @if ($screen == 'D') {
-    @media screen and (min-width: $breakpoint) {
+    @media screen and (min-width: $lg-breakpoint) {
       @content;
     }
   }
-}
-
-@mixin mobile-only() {
-  @media screen and (max-width: $breakpoint - 1px) {
-    @content;
+  @if ($screen == 'T') {
+    @media screen and (max-width: $lg-breakpoint) {
+      @content;
+    }
+  }
+  @if ($screen == 'M') {
+    @media screen and (max-width: $md-breakpoint - 1) {
+      @content;
+    }
   }
 }
 
@@ -28,14 +32,14 @@ $breakpoint: 768px;
   border: 0 !important;
 }
 
-.sm-only {
-  @media screen and (min-width: $breakpoint) {
+.mobile-only {
+  @media screen and (min-width: $lg-breakpoint) {
     display: none !important;
   }
 }
 
-.sm-hidden {
-  @media screen and (max-width: $breakpoint - 1) {
+.mobile-hidden {
+  @media screen and (max-width: $lg-breakpoint - 1) {
     display: none !important;
   }
 }
