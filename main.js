@@ -9,7 +9,7 @@ window.addEventListener('scroll', () => {
   if (a > 0) {
     title1.style.width = `${a}px`;
   } else {
-    title1.style.width = '5.5vw';
+    title1.style.width = '5vw';
   }
 });
 
@@ -43,14 +43,6 @@ text.forEach((element) => {
 
 const target = document.querySelector('.contact-wrapper');
 observer.observe(target);
-
-//project text
-
-const proText = document.querySelector('#proText h1');
-window.addEventListener('scroll', () => {
-  const current = window.scrollY;
-  proText.style.fontSize = `clamp(5vw, ${current / 10}px, 20vw)`;
-});
 
 // Scroll
 
@@ -164,25 +156,56 @@ window.onload = init;
 //   });
 // });
 
-const items = document.querySelectorAll('.project-item');
+//project text
+// const proText = document.querySelector('#proText h2');
+// window.addEventListener('scroll', () => {
+//   const current = window.scrollY;
+//   proText.style.fontSize = `clamp(6vw, ${current / 8}px, 20vw)`;
+// });
 
-items.forEach((item) => {
-  const photo = item.querySelector('.project-item-photo'),
-    parent = item.parentElement;
-  item.addEventListener('mousemove', (e) => {
-    photo.classList.add('is-reveal');
-    parent.classList.add('is-reveal');
-    const cursorX = e.pageX;
+if (window.matchMedia('(min-width: 1200px)').matches) {
+  //project text
 
-    const itemLeft = item.getBoundingClientRect().left;
-
-    const photoPositionX = cursorX - itemLeft;
-
-    photo.style.left = `${photoPositionX}px`;
+  const proText = document.querySelector('#proText h2');
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    proText.style.fontSize = `clamp(6vw, ${current / 8}px, 20vw)`;
   });
 
-  item.addEventListener('mouseleave', () => {
-    photo.classList.remove('is-reveal');
-    parent.classList.remove('is-reavel');
+  // project image hover
+
+  const items = document.querySelectorAll('.project-item');
+
+  items.forEach((item) => {
+    const photo = item.querySelector('.project-item-photo'),
+      parent = item.parentElement;
+    item.addEventListener('mousemove', (e) => {
+      photo.classList.add('is-reveal');
+      parent.classList.add('is-reveal');
+      const cursorX = e.pageX;
+
+      const itemLeft = item.getBoundingClientRect().left;
+
+      const photoPositionX = cursorX - itemLeft;
+
+      photo.style.left = `${photoPositionX}px`;
+    });
+
+    item.addEventListener('mouseleave', () => {
+      photo.classList.remove('is-reveal');
+      parent.classList.remove('is-reavel');
+    });
   });
-});
+} else {
+  //project text
+
+  const proText = document.querySelector('#proText h2');
+  window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    proText.style.fontSize = `clamp(3rem, ${current / 15}px, 10rem)`;
+  });
+}
+
+window.onresize = () => {
+  location.reload();
+};
