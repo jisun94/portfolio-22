@@ -11,13 +11,6 @@
 @import './components/about';
 @import './components/proText';
 @import './components/project';
+@import './components/projectPage';
 @import './components/contact';
 @import './components/menu';
-
-.text {
-  @include transition2;
-  opacity: 0;
-  &.is-active {
-    opacity: 1;
-  }
-}
