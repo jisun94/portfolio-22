@@ -38,6 +38,7 @@
     }
 
     &-name {
+      width: 100vw;
       color: $orange;
       letter-spacing: -0.3vw;
       font-size: 4vw;
@@ -46,9 +47,8 @@
     &-photo {
       position: absolute;
       overflow: hidden;
-      width: 22vw;
-      height: 22vw;
-      border-radius: 8px;
+      width: 28vw;
+      height: 16vw;
       z-index: 100;
       visibility: hidden;
       opacity: 0;
