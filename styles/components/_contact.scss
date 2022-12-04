@@ -1,13 +1,14 @@
 .contact {
   @include flexbox(center);
   position: relative;
-  height: 110vh;
+  height: 100vh;
 
   &-wrapper {
     @include column-flexbox(center);
     @include transition;
     width: 0;
     height: 60vh;
+    margin-bottom: 10vh;
     border-top: 3px solid $orange;
     border-bottom: 3px solid $orange;
 

@@ -79,8 +79,6 @@
   }
 
   @include responsive(T) {
-    padding: 0;
-
     &-list {
     }
     &-item {

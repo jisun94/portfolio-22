@@ -1,7 +1,7 @@
-@import './base/normalize';
-@import './base/grids';
 @import './constants/colors';
 @import './base/font';
+@import './base/normalize';
+@import './base/grids';
 @import './base/reset';
 @import './mixins/flexbox';
 @import './mixins/positions';
@@ -15,10 +15,9 @@
 @import './components/menu';
 
 .text {
-  @include transition;
+  @include transition2;
   opacity: 0;
   &.is-active {
-    transition: all 400ms ease-in-out;
     opacity: 1;
   }
 }

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -5,7 +6,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -483,7 +483,8 @@ header {
   height: 10vh;
   padding: 0 100px;
   opacity: 0;
-  z-index: 1000; }
+  z-index: 1000;
+  backdrop-filter: blur(20px); }
   header .header-wrapper {
     display: flex;
     align-items: center;
@@ -509,7 +510,7 @@ header {
           margin-top: 0.5vw;
           transform-origin: center;
           transform: scale(0);
-          transition: all 0.5s cubic-bezier(0.32, 0.94, 0.6, 1); }
+          transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1); }
         header .header-wrapper .nav-item a:hover:after {
           transform: scaleX(1); }
     header .header-wrapper .menu {
@@ -520,7 +521,7 @@ header {
       text-align: center;
       font-size: 1vw;
       color: #f98e8e;
-      transition: all 0.5s cubic-bezier(0.32, 0.94, 0.6, 1); }
+      transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1); }
       header .header-wrapper .menu:hover {
         color: #f0f0f0;
         background-color: #f98e8e; }
@@ -547,9 +548,7 @@ header {
 .home {
   position: relative;
   height: 100vh;
-  margin-top: 10vh;
-  padding: 12vh 0 20vh 0;
-  z-index: -1; }
+  padding: 22vh 0 20vh 0; }
   .home h1 {
     width: max-content;
     font-size: 8vw;
@@ -602,7 +601,7 @@ header {
     animation-delay: 1.2s;
     position: absolute;
     right: 0;
-    bottom: 25vh;
+    bottom: 15vh;
     font-size: 1.2vw;
     font-weight: 600;
     opacity: 0; }
@@ -652,7 +651,7 @@ header {
     font-size: 3vw; }
   @media screen and (max-width: 1200px) {
     .about {
-      padding: 0 4vw; }
+      padding: 10vh 4vw 0 4vw; }
       .about-text-main {
         flex-direction: column;
         align-items: center;
@@ -765,14 +764,12 @@ header {
         min-height: 100%;
         object-fit: cover; }
   @media screen and (max-width: 1200px) {
-    .project {
-      padding: 0; }
-      .project-item {
-        height: 30vh; }
-        .project-item::before {
-          font-size: 1.5rem; }
-        .project-item-name {
-          font-size: 4rem; } }
+    .project-item {
+      height: 30vh; }
+      .project-item::before {
+        font-size: 1.5rem; }
+      .project-item-name {
+        font-size: 4rem; } }
   @media screen and (max-width: 767px) {
     .project-item {
       height: 20vh; }
@@ -786,7 +783,7 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  height: 110vh; }
+  height: 100vh; }
   .contact-wrapper {
     display: flex;
     flex-direction: column;
@@ -795,6 +792,7 @@ header {
     transition: all 400ms ease-in-out;
     width: 0;
     height: 60vh;
+    margin-bottom: 10vh;
     border-top: 3px solid #f98e8e;
     border-bottom: 3px solid #f98e8e; }
     .contact-wrapper.is-active {
@@ -839,7 +837,7 @@ header {
             margin-top: 0.5vw;
             transform-origin: center;
             transform: scale(0);
-            transition: all 0.5s cubic-bezier(0.32, 0.94, 0.6, 1); }
+            transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1); }
           .contact footer .socials li a:hover:after {
             transform: scaleX(1); }
   @media screen and (max-width: 1200px) {
@@ -896,10 +894,9 @@ header {
           margin: 1vh; } }
 
 .text {
-  transition: all 400ms ease-in-out;
+  transition: all 0.8s cubic-bezier(0.32, 0.94, 0.6, 1);
   opacity: 0; }
   .text.is-active {
-    transition: all 400ms ease-in-out;
     opacity: 1; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,7 @@
 .home {
   position: relative;
   height: 100vh;
-  margin-top: 10vh;
-  padding: 12vh 0 20vh 0;
-  z-index: -1;
+  padding: 22vh 0 20vh 0;
 
   h1 {
     width: max-content;
@@ -49,7 +47,7 @@
     animation-delay: 1.2s;
     position: absolute;
     right: 0;
-    bottom: 25vh;
+    bottom: 15vh;
     font-size: 1.2vw;
     font-weight: 600;
     opacity: 0;
